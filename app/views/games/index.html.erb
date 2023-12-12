@@ -1,0 +1,34 @@
+<h1>Games List</h1>
+Welcome to the GamesApp
+<hr class = "title-line">
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Release Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.description %></td>
+        <td class="release-date"><%= game.release_date %></td>
+        <td><%= button_to 'Show', game, method: :get, style: 'background-color: #007BFF; color: white; padding: 8px 12px; border: none; border-radius: 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;' %></td>
+        <td><%= button_to 'Edit', edit_game_path(game), method: :get, style: 'background-color: #007BFF; color: white; padding: 8px 12px; border: none; border-radius: 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;' %></td>
+        <td><%= button_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' }, style: 'background-color: #DC3545; color: white; padding: 8px 12px; border: none; border-radius: 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 14px; cursor: pointer;' %></td>
+       
+      </tr>
+    <% end %>
+
+  </tbody>
+
+</table>
+    
+<br>
+
+<%= button_to 'New Game', new_game_path, method: :get, style: 'background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin-top: 10px; cursor: pointer;' %>
+

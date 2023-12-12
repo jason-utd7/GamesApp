@@ -1,0 +1,9 @@
+
+<h1>Edit Game</h1>
+<hr class = "title-line">
+<%= render 'form' %>
+<%= button_to 'Show', @game, method: :get %> |
+<div class="form-actions">
+  <%= button_to 'Go Back', games_path, method: :get, class: 'back-button' %>
+</div>
+

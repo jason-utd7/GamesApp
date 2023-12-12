@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap';
+
+body {
+  background-color: #89CFF0; /*background colour*/
+}
+
+.title-line {
+  border: 1px solid #000000; 
+}
+
+/* app/assets/stylesheets/application.css */
+
+/* Add some styling for the form */
+.form-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+ /*added some styling for the form*/
+.back-button {
+  background-color: #DC3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Style the separator line */
+.title-line {
+  border: 0;
+  height: 1px;
+  background: #000000; /* Choose a color that fits your design */
+  margin: 20px 0;
+}
+

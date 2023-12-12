@@ -1,0 +1,11 @@
+<p style="color: red"><%= notice %></p>
+<h1><%= @game.title %></h1>
+<p><strong>Description:</strong><br><%= @game.description %></p>
+<p><strong>Release Date:</strong><br><%= @game.release_date %></p>
+
+<%= button_to 'Edit', edit_game_path(@game), method: :get %> |
+<%= button_to "Delete this Game?", @game, method: :delete %>
+<div class="form-actions">
+<%= button_to 'Go Back', games_path, method: :get, class: 'back-button' %>
+</div>
+
